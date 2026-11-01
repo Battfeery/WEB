@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BattFEEry - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <!-- Dito papasok ang pangalan mula sa JS -->
+            <h2>Welcome, <span id="userNameDisplay">Student</span>!</h2>
+            <p>Select an available power bank to generate a payment QR code.</p>
+        </div>
+        
+        <div class="powerbank-grid" id="powerbankGrid">
+            <!-- Power banks will be injected here by script.js -->
+        </div>
+        
+        <a href="login.html" class="logout-btn">Log Out</a>
+    </div>
+
+    <!-- QR Code Modal na may InstaPay QR mo -->
+    <div class="modal-overlay" id="qrModal" style="display: none;">
+        <div class="modal-content">
+            <h2>Scan to Pay & Unlock</h2>
+            <p id="modalSubtitle">Power Bank: PB-01</p>
+            
+            <div class="qr-placeholder">
+                <img src="qr.jpg" alt="InstaPay QR Code" id="qrImage">
+            </div>
+            
+            <p class="price-text">Rate: ₱30 for 1st hour</p>
+            <p class="warning-text">Make sure to return it to avoid the ₱10/30mins penalty.</p>
+            
+            <button class="close-btn" id="closeModalBtn">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
